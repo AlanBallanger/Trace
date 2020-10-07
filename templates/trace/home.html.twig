@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<h1>TRACE</h1> 
+
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="item active">
+                    <div class="thumbnail">
+                      <img src="http://placehold.it/300x200/" alt="Slide1">
+                      <div class="caption">
+
+                      </div>
+                    </div>        
+                </div><!-- End Item -->
+                <div class="item">
+                    <div class="thumbnail">
+                      <img src="http://placehold.it/300x200/" alt="Slide2">
+                      <div class="caption">
+
+                      </div>
+                    </div>        
+                </div><!-- End Item -->
+                <div class="item">
+                    <div class="thumbnail">
+                      <img src="http://placehold.it/300x200/" alt="Slide1">
+                      <div class="caption">
+
+                      </div>
+                    </div>        
+                </div><!-- End Item -->                                
+              </div><!-- End Carousel Inner -->
+              <div class="carousel-controls">
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+              </div>
+            </div>
+{% for article in articles %}
+    <li>{{ article.getTitle() }}</li>
+{% endfor %}
+
+<h2> Découvrez nos chaines Radios et TV </h2>
+
+{% endblock %}
